@@ -1,0 +1,25 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 100%; min-height: 100%; background: #020612; }
+body { display: flex; justify-content: center; }
+.page { width: 100%; max-width: 1600px; }
+/* The PNG itself must never capture clicks - the transparent hotspots handle them. */
+.project-image { display: block; width: 100%; height: auto; pointer-events: none; user-select: none; -webkit-user-drag: none; }
+
+/* Transparent clickable overlays positioned over buttons in the image.
+   Coordinates are percentages of the image box, so they scale with it. */
+.image-wrapper { position: relative; }
+.hotspot {
+  position: absolute;
+  left: var(--x); top: var(--y);
+  width: var(--w); height: var(--h);
+  display: block;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  z-index: 10; /* above the image (z-index auto) so the overlays always win */
+  -webkit-tap-highlight-color: transparent; /* keep overlays invisible on mobile taps */
+  touch-action: manipulation; /* fast, reliable tap response on touch screens */
+}
+.hotspot:focus-visible { outline: 2px solid rgba(255, 255, 255, 0.6); outline-offset: 2px; }

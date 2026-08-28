@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud &amp; DevOps Infrastructure Built to Scale | Kaala Mitra</title>
+  <meta name="description" content="We design, automate and manage secure, scalable and cost-efficient cloud infrastructure with DevOps best practices to accelerate your digital journey.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" opacity=".45"/><path d="M8 12.5l2.5 2.5L16 9.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19a4.5 4.5 0 0 0 .9-8.9 7 7 0 0 0-13.6 1.6A4 4 0 0 0 6 19z"/></symbol>
+  <symbol id="i-cloudup" viewBox="0 0 24 24"><path d="M17.5 19a4.5 4.5 0 0 0 .9-8.9 7 7 0 0 0-13.6 1.6A4 4 0 0 0 6 19z"/><path d="M12 16v-5M9.5 13.5L12 11l2.5 2.5"/></symbol>
+  <symbol id="i-clouddown" viewBox="0 0 24 24"><path d="M17.5 19a4.5 4.5 0 0 0 .9-8.9 7 7 0 0 0-13.6 1.6A4 4 0 0 0 6 19z"/><path d="M12 11v5M9.5 13.5L12 16l2.5-2.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 7.5-8 9-4.5-1.5-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></symbol>
+  <symbol id="i-loop" viewBox="0 0 24 24"><path d="M7 8c-2.5 0-4 1.8-4 4s1.5 4 4 4c3.5 0 6.5-8 10-8 2.5 0 4 1.8 4 4s-1.5 4-4 4c-3.5 0-6.5-8-10-8z"/></symbol>
+  <symbol id="i-activity" viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></symbol>
+  <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M5 15c-1.5 1.2-2 5-2 5s3.8-.5 5-2M9 13L6 12l8.5-8.5c2 0 5 .5 5 .5s.5 3 .5 5L11.5 17l-1-3z"/><circle cx="14.5" cy="9.5" r="1.6"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/><path d="M3 17l9 5 9-5"/></symbol>
+  <symbol id="i-dollar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.5c-.6-1-1.7-1.5-3-1.5-1.7 0-3 .9-3 2s1 1.7 3 2 3 .9 3 2-1.3 2-3 2c-1.3 0-2.4-.5-3-1.5"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 3v6h-6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></symbol>
+  <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="3" y="13" width="4" height="6" rx="2"/><rect x="17" y="13" width="4" height="6" rx="2"/><path d="M19 19a4 4 0 0 1-4 3h-2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.7-1.8c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.1-.2 3.6a12 12 0 0 0 4.6 4.3c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8zM19 15l.9 2.6 2.6.9-2.6.9L19 22l-.9-2.6-2.6-.9 2.6-.9z"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></symbol>
+</svg>
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#home" aria-label="Kaala Mitra - home">
+      <img class="brand-logo" src="images/logo..0.png" alt="Kaala Mithra - AI Tech Solution logo" width="666" height="375">
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <a class="nav-link" href="#home">Home</a>
+      <a class="nav-link" href="#services">Services</a>
+      <a class="nav-link" href="#industries">Industries</a>
+      <a class="nav-link" href="#why-us">Why Us</a>
+      <a class="nav-link" href="#results">Portfolio</a>
+      <div class="nav-drop">
+        <button class="nav-link nav-drop-btn" type="button" aria-expanded="false">Resources
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="nav-drop-menu">
+          <a href="#results">Case Studies</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Help Center</a>
+        </div>
+      </div>
+      <a class="nav-link" href="#faq">FAQ</a>
+      <a class="nav-link" href="#contact">Contact</a>
+      <div class="nav-mobile-cta">
+        <a class="btn btn-whatsapp" href="https://wa.me/918884014055" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.7-1.8c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.1-.2 3.6a12 12 0 0 0 4.6 4.3c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"/></svg>
+          WhatsApp</a>
+        <a class="btn btn-signup" href="#contact">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+          Sign Up</a>
+      </div>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-whatsapp" href="https://wa.me/918884014055" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.7-1.8c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.1-.2 3.6a12 12 0 0 0 4.6 4.3c1.7.8 2.4.9 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3z"/></svg>
+        WhatsApp</a>
+      <a class="btn btn-signup" href="#contact">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg>
+        Sign Up</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<!-- ================= HERO ================= -->
+<main id="home">
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <span class="badge"><svg class="ic" width="15" height="15"><use href="#i-cloud"/></svg> CLOUD &amp; DEVOPS INFRASTRUCTURE</span>
+        <h1 class="hero-title">Cloud &amp; DevOps<br><span class="grad-text">Infrastructure</span><br><span class="title-muted">Built to Scale</span></h1>
+        <p class="lead">We design, automate and manage secure, scalable, and cost-efficient cloud infrastructure with DevOps best practices to accelerate your digital journey.</p>
+        <ul class="hero-checks">
+          <li><svg class="ic" width="18" height="18" style="color:#34d399"><use href="#i-check"/></svg>Cloud Strategy &amp; Migration</li>
+          <li><svg class="ic" width="18" height="18" style="color:#34d399"><use href="#i-check"/></svg>CI/CD Pipeline Implementation</li>
+          <li><svg class="ic" width="18" height="18" style="color:#34d399"><use href="#i-check"/></svg>Infrastructure Automation</li>
+          <li><svg class="ic" width="18" height="18" style="color:#34d399"><use href="#i-check"/></svg>Monitoring &amp; Observability</li>
+          <li><svg class="ic" width="18" height="18" style="color:#34d399"><use href="#i-check"/></svg>High Availability &amp; Scalability</li>
+          <li><svg class="ic" width="18" height="18" style="color:#34d399"><use href="#i-check"/></svg>Security &amp; Compliance</li>
+        </ul>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="#contact">Get Free Consultation <svg class="ic" width="16" height="16"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost btn-lg" href="#services">Explore Solutions <svg class="icf" width="16" height="16" style="color:#c4b5fd"><use href="#i-spark"/></svg></a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <img src="images/hero-cloud-devops.jpeg" alt="Cloud infrastructure dashboard with auto deployment, cost optimization, security and scalability highlights" width="985" height="440" fetchpriority="high">
+      </div>
+    </div>
+    <div class="container">
+      <div class="stats-bar reveal" aria-label="Key achievements">
+        <div class="stat">
+          <span class="stat-icon"><svg class="ic" width="22" height="22"><use href="#i-cloudup"/></svg></span>
+          <div><span class="stat-value"><span class="count" data-target="500" data-decimals="0">0</span>+</span><span class="stat-label">Cloud Deployments</span></div>
+        </div>
+        <div class="stat">
+          <span class="stat-icon"><svg class="ic" width="22" height="22"><use href="#i-shield"/></svg></span>
+          <div><span class="stat-value"><span class="count" data-target="99.99" data-decimals="2">0</span>%</span><span class="stat-label">Uptime Achieved</span></div>
+        </div>
+        <div class="stat">
+          <span class="stat-icon"><svg class="ic" width="22" height="22"><use href="#i-clock"/></svg></span>
+          <div><span class="stat-value"><span class="count" data-target="40" data-decimals="0">0</span>%</span><span class="stat-label">Cost Savings</span></div>
+        </div>
+        <div class="stat">
+          <span class="stat-icon"><svg class="icf" width="22" height="22" style="color:#a78bfa"><use href="#i-bolt"/></svg></span>
+          <div><span class="stat-value"><span class="count" data-target="3" data-decimals="0">0</span>x Faster</span><span class="stat-label">Time to Market</span></div>
+        </div>
+        <div class="stat">
+          <span class="stat-icon"><svg class="ic" width="22" height="22"><use href="#i-headset"/></svg></span>
+          <div><span class="stat-value">24/7</span><span class="stat-label">Expert Support</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================= SERVICES ================= -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Our <span class="grad-text">Cloud &amp; DevOps</span> Services</h2>
+        <p>Everything you need to design, automate and run production-grade cloud infrastructure.</p>
+      </div>
+      <div class="card-grid">
+        <article class="service-card reveal">
+          <div class="card-icon"><svg class="ic" width="26" height="26"><use href="#i-compass"/></svg></div>
+          <h3>Cloud Consulting</h3>
+          <p>Expert guidance to build the right cloud strategy aligned with your business goals.</p>
+          <a class="learn-more" href="#contact">Learn More <svg class="ic" width="15" height="15"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="service-card reveal">
+          <div class="card-icon"><svg class="ic" width="26" height="26"><use href="#i-clouddown"/></svg></div>
+          <h3>Cloud Migration</h3>
+          <p>Seamless migration to AWS, Azure or GCP with zero downtime.</p>
+          <a class="learn-more" href="#contact">Learn More <svg class="ic" width="15" height="15"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="service-card reveal">
+          <div class="card-icon"><svg class="ic" width="26" height="26"><use href="#i-code"/></svg></div>
+          <h3>Infrastructure as Code</h3>
+          <p>Automate infrastructure provisioning with Terraform, Ansible &amp; CloudFormation.</p>
+          <a class="learn-more" href="#contact">Learn More <svg class="ic" width="15" height="15"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="service-card reveal">
+          <div class="card-icon"><svg class="ic" width="26" height="26"><use href="#i-loop"/></svg></div>
+          <h3>CI/CD Automation</h3>
+          <p>Build, test and deploy faster with automated CI/CD pipelines.</p>
+          <a class="learn-more" href="#contact">Learn More <svg class="ic" width="15" height="15"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="service-card reveal">
+          <div class="card-icon"><svg class="ic" width="26" height="26"><use href="#i-activity"/></svg></div>
+          <h3>Monitoring &amp; Logging</h3>
+          <p>Real-time monitoring, logging and alerting for optimal performance.</p>
+          <a class="learn-more" href="#contact">Learn More <svg class="ic" width="15" height="15"><use href="#i-arrow"/></svg></a>
+        </article>
+        <article class="service-card reveal">
+          <div class="card-icon"><svg class="ic" width="26" height="26"><use href="#i-shield"/></svg></div>
+          <h3>Security &amp; Compliance</h3>
+          <p>Implement best practices for security, backup and regulatory compliance.</p>
+          <a class="learn-more" href="#contact">Learn More <svg class="ic" width="15" height="15"><use href="#i-arrow"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INDUSTRIES ================= -->
+  <section class="section section-alt" id="industries">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Industries <span class="grad-text">We Serve</span></h2>
+        <p>Cloud &amp; DevOps expertise tailored to the domains we know best.</p>
+      </div>
+      <div class="chips reveal">
+        <span class="chip"><svg class="ic" width="16" height="16"><use href="#i-code"/></svg>Technology &amp; Software</span>
+        <span class="chip"><svg class="ic" width="16" height="16"><use href="#i-layers"/></svg>E-Commerce</span>
+        <span class="chip"><svg class="ic" width="16" height="16"><use href="#i-shield"/></svg>Healthcare</span>
+        <span class="chip"><svg class="ic" width="16" height="16"><use href="#i-compass"/></svg>Education</span>
+        <span class="chip"><svg class="ic" width="16" height="16"><use href="#i-pin"/></svg>Real Estate</span>
+        <span class="chip"><svg class="ic" width="16" height="16"><use href="#i-dollar"/></svg>Finance</span>
+        <span class="chip"><svg class="ic" width="16" height="16"><use href="#i-layers"/></svg>Retail</span>
+        <span class="chip"><svg class="ic" width="16" height="16"><use href="#i-clock"/></svg>Food &amp; Hospitality</span>
+        <span class="chip"><svg class="ic" width="16" height="16"><use href="#i-rocket"/></svg>Manufacturing</span>
+        <span class="chip"><svg class="ic" width="16" height="16"><use href="#i-user"/></svg>Professional Services</span>
+        <span class="chip"><svg class="ic" width="16" height="16"><use href="#i-spark"/></svg>Startups &amp; MVPs</span>
+      </div>
+    </div>
+  </section>
+  <!-- ================= WHY US ================= -->
+  <section class="section" id="why-us">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Why Teams <span class="grad-text">Choose Kaala Mitra</span></h2>
+        <p>We do more than manage servers. We build a complete, growth-ready cloud ecosystem with automation, security and observability at its core.</p>
+      </div>
+      <div class="card-grid">
+        <article class="benefit-card reveal">
+          <div class="card-icon"><svg class="ic" width="26" height="26"><use href="#i-rocket"/></svg></div>
+          <h3>Faster Deployments</h3>
+          <p>Automate &amp; accelerate your delivery pipeline.</p>
+        </article>
+        <article class="benefit-card reveal">
+          <div class="card-icon"><svg class="ic" width="26" height="26"><use href="#i-layers"/></svg></div>
+          <h3>Reliable &amp; Scalable</h3>
+          <p>Build resilient infrastructure that scales with your growth.</p>
+        </article>
+        <article class="benefit-card reveal">
+          <div class="card-icon"><svg class="ic" width="26" height="26"><use href="#i-dollar"/></svg></div>
+          <h3>Cost Effective</h3>
+          <p>Optimize resources and reduce cloud costs.</p>
+        </article>
+        <article class="benefit-card reveal">
+          <div class="card-icon"><svg class="ic" width="26" height="26"><use href="#i-shield"/></svg></div>
+          <h3>Better Security</h3>
+          <p>Protect your infrastructure and data in the cloud.</p>
+        </article>
+        <article class="benefit-card reveal">
+          <div class="card-icon"><svg class="ic" width="26" height="26"><use href="#i-refresh"/></svg></div>
+          <h3>Continuous Improvement</h3>
+          <p>Monitor, optimize and improve continuously.</p>
+        </article>
+        <article class="benefit-card reveal">
+          <div class="card-icon"><svg class="ic" width="26" height="26"><use href="#i-headset"/></svg></div>
+          <h3>24/7 Expert Support</h3>
+          <p>Real engineers on call whenever you need them.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RESULTS / PORTFOLIO ================= -->
+  <section class="section section-alt" id="results">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Portfolio &amp; <span class="grad-text">Proven Results</span></h2>
+        <p>The outcomes we engineer for every workload we manage.</p>
+      </div>
+      <div class="result-grid">
+        <article class="result-card reveal">
+          <span class="result-tag"><svg class="ic" width="14" height="14"><use href="#i-shield"/></svg>99.99% Uptime</span>
+          <h3>E-Commerce Scale-Up</h3>
+          <p>Re-architected workloads on AWS with auto-scaling — 99.99% uptime maintained across every peak-season sale event.</p>
+        </article>
+        <article class="result-card reveal">
+          <span class="result-tag"><svg class="icf" width="14" height="14"><use href="#i-bolt"/></svg>3x Faster Releases</span>
+          <h3>FinTech Release Velocity</h3>
+          <p>Containerised delivery with CI/CD automation — deployments shipped 3x faster with zero-downtime releases.</p>
+        </article>
+        <article class="result-card reveal">
+          <span class="result-tag"><svg class="ic" width="14" height="14"><use href="#i-dollar"/></svg>40% Cost Savings</span>
+          <h3>SaaS Cost Optimization</h3>
+          <p>Right-sized infrastructure with IaC and monitoring — 40% lower monthly cloud spend with better performance.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- ================= FAQ ================= -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Cloud &amp; DevOps <span class="grad-text">Questions</span></h2>
+        <p>Find clear answers about platforms, migrations, support and getting started.</p>
+      </div>
+      <div class="faq-grid">
+        <aside class="faq-aside reveal">
+          <h3>Need More Information?</h3>
+          <p>Speak directly with our cloud experts and get personalised guidance about your infrastructure.</p>
+          <ul class="aside-list">
+            <li><svg class="ic" width="17" height="17"><use href="#i-check"/></svg>Free initial consultation</li>
+            <li><svg class="ic" width="17" height="17"><use href="#i-check"/></svg>Clear project roadmap</li>
+            <li><svg class="ic" width="17" height="17"><use href="#i-check"/></svg>Dedicated cloud experts</li>
+            <li><svg class="ic" width="17" height="17"><use href="#i-check"/></svg>Transparent launch process</li>
+          </ul>
+          <div class="aside-ctas">
+            <a class="btn btn-primary" href="#contact">Register Now <svg class="ic" width="15" height="15"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-whatsapp" href="https://wa.me/918884014055" target="_blank" rel="noopener"><svg class="icf" width="16" height="16"><use href="#i-wa"/></svg> Ask on WhatsApp</a>
+          </div>
+        </aside>
+        <div class="faq-list reveal">
+          <div class="faq-item open">
+            <button class="faq-q" type="button" aria-expanded="true"><span class="faq-num">01</span><span class="q-text">Which cloud platforms do you work with?</span><svg class="ic chev" width="16" height="16"><use href="#i-chev"/></svg></button>
+            <div class="faq-a"><p>We work with AWS, Microsoft Azure and Google Cloud Platform, including hybrid and multi-cloud setups. Infrastructure is managed as code with Terraform, Ansible and CloudFormation, and deployments run through automated CI/CD pipelines.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false"><span class="faq-num">02</span><span class="q-text">Is the initial consultation free?</span><svg class="ic chev" width="16" height="16"><use href="#i-chev"/></svg></button>
+            <div class="faq-a"><p>Yes — the first consultation is completely free. We review your current setup, understand your goals and share a clear roadmap with estimates before any commitment.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false"><span class="faq-num">03</span><span class="q-text">How long does a cloud migration take?</span><svg class="ic chev" width="16" height="16"><use href="#i-chev"/></svg></button>
+            <div class="faq-a"><p>Most migrations complete within 2–6 weeks depending on workload complexity. We migrate in phases with zero downtime and rollback plans at every step.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false"><span class="faq-num">04</span><span class="q-text">Can you modernise our existing infrastructure?</span><svg class="ic chev" width="16" height="16"><use href="#i-chev"/></svg></button>
+            <div class="faq-a"><p>Absolutely. We codify existing infrastructure with Terraform and Ansible, add CI/CD pipelines, monitoring and security hardening — without disrupting your live systems.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false"><span class="faq-num">05</span><span class="q-text">Do you provide support after launch?</span><svg class="ic chev" width="16" height="16"><use href="#i-chev"/></svg></button>
+            <div class="faq-a"><p>Yes. Every project includes monitoring, alerting and 24/7 expert support options with continuous optimisation, backups and security patching.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false"><span class="faq-num">06</span><span class="q-text">How do I get started?</span><svg class="ic chev" width="16" height="16"><use href="#i-chev"/></svg></button>
+            <div class="faq-a"><p>Register for a free consultation or message us on WhatsApp. Our cloud experts will contact you within 24 hours with a personalised plan for your infrastructure.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================= CONTACT ================= -->
+  <section class="section section-alt" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-copy reveal">
+        <span class="badge"><svg class="ic" width="15" height="15"><use href="#i-cloud"/></svg> CLOUD &amp; DEVOPS CONSULTATION</span>
+        <h2>Ready to Scale Your <span class="grad-text">Cloud Infrastructure?</span></h2>
+        <p>Tell us about your infrastructure. Our cloud experts will review your requirements and contact you shortly.</p>
+        <ul class="trust-list">
+          <li><svg class="ic" width="17" height="17"><use href="#i-check"/></svg>Free initial consultation</li>
+          <li><svg class="ic" width="17" height="17"><use href="#i-check"/></svg>Clear project roadmap</li>
+          <li><svg class="ic" width="17" height="17"><use href="#i-check"/></svg>Dedicated cloud experts</li>
+          <li><svg class="ic" width="17" height="17"><use href="#i-check"/></svg>Transparent process</li>
+        </ul>
+        <div class="quick-contacts">
+          <a class="qc" href="tel:+918884014055"><span class="qc-icon"><svg class="ic" width="18" height="18"><use href="#i-phone"/></svg></span>+91 88840 14055</a>
+          <a class="qc" href="tel:+919972770266"><span class="qc-icon"><svg class="ic" width="18" height="18"><use href="#i-phone"/></svg></span>+91 9972770266</a>
+          <a class="qc" href="tel:+916361842299"><span class="qc-icon"><svg class="ic" width="18" height="18"><use href="#i-phone"/></svg></span>+91 6361842299</a>
+          <a class="qc" href="https://www.kaalamithra-ai.com/" target="_blank" rel="noopener"><span class="qc-icon"><svg class="ic" width="18" height="18"><use href="#i-mail"/></svg></span>https://www.kaalamithra-ai.com/</a>
+          <a class="qc" href="https://wa.me/918884014055" target="_blank" rel="noopener"><span class="qc-icon"><svg class="icf" width="18" height="18"><use href="#i-wa"/></svg></span>WhatsApp Us</a>
+          <span class="qc"><span class="qc-icon"><svg class="ic" width="18" height="18"><use href="#i-pin"/></svg></span>India · Remote Friendly</span>
+        </div>
+      </div>
+      <div class="form-card reveal">
+        <h3>Register for Free Consultation</h3>
+        <p>Fill in your details — we will contact you within 24 hours.</p>
+        <form id="consult-form" novalidate>
+          <div class="form-row">
+            <div class="field"><label for="f-name">Full Name *</label><input id="f-name" name="name" type="text" placeholder="Your full name" required></div>
+            <div class="field"><label for="f-phone">Mobile Number *</label><input id="f-phone" name="phone" type="tel" placeholder="+91 ..." required></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="f-email">Email *</label><input id="f-email" name="email" type="email" placeholder="you@company.com" required></div>
+            <div class="field"><label for="f-company">Company Name</label><input id="f-company" name="company" type="text" placeholder="Your company"></div>
+          </div>
+          <div class="field">
+            <label for="f-service">Service Needed *</label>
+            <select id="f-service" name="service" required>
+              <option value="" selected disabled>Select a service</option>
+              <option>Cloud Consulting</option>
+              <option>Cloud Migration</option>
+              <option>Infrastructure as Code</option>
+              <option>CI/CD Automation</option>
+              <option>Monitoring &amp; Logging</option>
+              <option>Security &amp; Compliance</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="field"><label for="f-message">Project Requirements *</label><textarea id="f-message" name="message" rows="4" placeholder="Tell us about your infrastructure, goals and timeline..." required></textarea></div>
+          <label class="consent"><input type="checkbox" name="consent" required> I agree to receive consultation, service updates and follow-up communication.</label>
+          <button class="btn btn-primary btn-block" type="submit"><svg class="icf" width="17" height="17"><use href="#i-wa"/></svg> Register for Free Consultation</button>
+          <p class="form-note"><svg class="ic" width="14" height="14"><use href="#i-lock"/></svg> Your information is secure — we use your details only to contact you about your cloud requirements.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <a class="brand" href="#home" aria-label="Kaala Mitra - home">
+          <img class="brand-logo" src="images/logo..0.png" alt="Kaala Mithra - AI Tech Solution logo" width="666" height="375">
+        </a>
+        <p>We design, automate and manage secure, scalable and cost-efficient cloud infrastructure with DevOps best practices — ideas today, impact tomorrow.</p>
+      </div>
+      <div class="f-col">
+        <h4 class="f-title">Cloud &amp; DevOps Services</h4>
+        <a href="#services">Cloud Consulting</a>
+        <a href="#services">Cloud Migration</a>
+        <a href="#services">Infrastructure as Code</a>
+        <a href="#services">CI/CD Automation</a>
+        <a href="#services">Monitoring &amp; Logging</a>
+        <a href="#services">Security &amp; Compliance</a>
+      </div>
+      <div class="f-col">
+        <h4 class="f-title">Quick Links</h4>
+        <a href="#home">Home</a>
+        <a href="#industries">Industries</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#results">Portfolio</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="f-col">
+        <h4 class="f-title">Get In Touch</h4>
+        <ul class="f-contact">
+          <li><svg class="ic" width="16" height="16"><use href="#i-phone"/></svg><a href="tel:+918884014055">+91 88840 14055</a></li>
+          <li><svg class="ic" width="16" height="16"><use href="#i-mail"/></svg><a href="https://www.kaalamithra-ai.com/" target="_blank" rel="noopener">https://www.kaalamithra-ai.com/</a></li>
+          <li><svg class="icf" width="16" height="16" style="color:#a78bfa"><use href="#i-wa"/></svg><a href="https://wa.me/918884014055" target="_blank" rel="noopener">WhatsApp Us</a></li>
+          <li><svg class="ic" width="16" height="16"><use href="#i-pin"/></svg>India · Remote Friendly</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Kaala Mitra — AI Tech Solution. All rights reserved.</span>
+      <span>Cloud &amp; DevOps Infrastructure Built to Scale</span>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
