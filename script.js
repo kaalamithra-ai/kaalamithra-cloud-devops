@@ -106,25 +106,65 @@
   }, { threshold: 0.6 });
   document.querySelectorAll('.count').forEach(function (el) { countIO.observe(el); });
 
-  /* Consultation form → WhatsApp message (no backend needed) */
-  var WHATSAPP = '918884014055';
+  /* Consultation form → Web3Forms (AJAX, strict success check) */
   var form = document.getElementById('consult-form');
+  if (!form) return;
+  var status = document.getElementById('form-status');
+  var sending = false;
+  function showStatus(msg, ok) {
+    if (!status) return;
+    status.hidden = false;
+    status.textContent = msg;
+    status.className = 'form-status ' + (ok ? 'success' : 'error');
+  }
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    if (sending) return;
     if (!form.reportValidity()) return;
-    var d = Object.fromEntries(new FormData(form));
-    var lines = [
-      'Hello Kaala Mitra! I am interested in your Cloud & DevOps services.',
-      '',
-      'Name: ' + d.name,
-      'Mobile: ' + d.phone,
-      'Email: ' + d.email,
-      'Company: ' + (d.company || '-'),
-      'Service: ' + d.service,
-      'Requirements: ' + d.message
-    ];
-    var url = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(lines.join('\n'));
-    window.open(url, '_blank', 'noopener');
+    var btn = form.querySelector('button[type="submit"]');
+    var original = btn.innerHTML;
+    sending = true;
+    btn.disabled = true;
+    btn.innerHTML = 'Sending...';
+    showStatus('Sending your request...', true);
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        access_key: form.querySelector('input[name="access_key"]').value.trim(),
+        subject: 'New Consultation Request - Kaalamithra Cloud & DevOps',
+        from_name: 'Kaala Mitra Website',
+        replyto: form.email.value.trim(),
+        name: form.name.value.trim(),
+        phone: form.phone.value.trim(),
+        email: form.email.value.trim(),
+        company: form.company.value.trim(),
+        service: form.service.value,
+        message: form.message.value.trim()
+      })
+    }).then(function (res) {
+      return res.text().then(function (txt) {
+        var data = {};
+        try { data = txt ? JSON.parse(txt) : {}; } catch (err) { throw new Error('Invalid server response (HTTP ' + res.status + ')'); }
+        if (!res.ok) throw new Error(data.message || ('Request failed (HTTP ' + res.status + ')'));
+        return data;
+      });
+    }).then(function (data) {
+      if (data.success === true) {
+        btn.innerHTML = 'Submitted Successfully';
+        showStatus('Submitted successfully! We will contact you within 24 hours.', true);
+        form.reset();
+      } else {
+        throw new Error(data.message || 'Submission rejected by server');
+      }
+      sending = false;
+      setTimeout(function () { btn.disabled = false; btn.innerHTML = original; }, 4000);
+    }).catch(function (err) {
+      sending = false;
+      btn.disabled = false;
+      btn.innerHTML = original;
+      showStatus('Submit failed: ' + (err && err.message ? err.message : 'network error') + '. Please try again or WhatsApp us.', false);
+    });
   });
 
   /* Footer year */
